@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for sport in sports %}
+<a href="/sports/{{sport.id}}">{{sport.name}}</a>
+{% endfor %}
+{% endblock %}

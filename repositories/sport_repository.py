@@ -29,7 +29,7 @@ def select_all():
 
 def select(id):
     sport = None
-    sql = "SELECT * FROM sports where id = %s"
+    sql = "SELECT * FROM sports WHERE id = %s"
     values = [id]
     results = run_sql(sql, values)
 

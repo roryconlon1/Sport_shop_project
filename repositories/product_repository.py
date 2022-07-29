@@ -26,3 +26,15 @@ def select_all():
         product = Product(product['name'], product['description'], product['stock_quantity'], product['buying_cost'], product['selling_price'], sport, product['id'])
         products.append(product)
     return products
+
+def select(id):
+    product = None
+    sql = "SELECT * FROM products WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    if results:
+        result = results[0]
+        sport = sport_repository.select(result['sport_id'])
+        product = Product(result['name'], result['description'], result['stock_quantity'], result['buying_cost'], result['selling_price'], sport, result['id'])
+    return product
