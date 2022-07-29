@@ -17,3 +17,22 @@ def index():
 def show(id):
     product = product_repository.select(id)
     return render_template('/products/product.html', product=product)
+
+@products_blueprint.route('/products/new')
+def new():
+    sports = sport_repository.select_all()
+    return render_template('/products/new.html', sports=sports)
+
+@products_blueprint.route('/products', methods = ['POST'])
+def create():
+    name = request.form['name']
+    description = request.form['description']
+    stock_quantity = request.form['stock_quantity']
+    buying_cost = request.form['buying_cost']
+    selling_price = request.form['selling_price']
+    sport_id = request.form['sport_id']
+    sport = sport_repository.select(sport_id)
+    product = Product(name, description, stock_quantity, buying_cost, selling_price, sport)
+    product_repository.save(product)
+    return redirect('/products')
+

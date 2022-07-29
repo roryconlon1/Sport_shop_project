@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/products" method="POST">
+    <div>
+        <label for="Name">Name:</label>
+        <input type="text" id="name" name="name" required autofocus>
+    </div>
+
+    <div>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+    </div>
+    <div>
+        <label for="stock_quantity">Stock Quantity:</label>
+        <input type="number" id="stock_quantity" name="stock_quantity" required>
+    </div>
+    <div>
+        <label for="buying_cost">Buying Cost:</label>
+        <input type="number" id="buying_cost" name="buying_cost" required>
+    </div>
+    <div>
+        <label for="selling_price">Selling Price:</label>
+        <input type="number" id="selling_price" name="selling_price" required>
+    </div>
+    <div>
+        <label for="sport">Sport:</label>
+        <select name="sport_id" id="sport_id" required>
+            {% for sport in sports %}
+                <option value="{{sport.id}}">{{sport.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button type="submit">Add Product!</button>
+
+    
+
+</form>
+
+{% endblock %}

@@ -17,3 +17,14 @@ def index():
 def show(id):
     sport = sport_repository.select(id)
     return render_template('/sports/sport.html', sport=sport)
+
+@sports_blueprint.route('/sports/new')
+def new():
+    return render_template('/sports/new.html')
+
+@sports_blueprint.route('/sports', methods = ['POST'])
+def create():
+    name = request.form['name']
+    sport = Sport(name)
+    sport_repository.save(sport)
+    return redirect('/sports')
