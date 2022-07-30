@@ -38,4 +38,9 @@ def select(id):
         sport = Sport(result['name'], result['id'])
     return sport
 
+def update(sport):
+    sql = "UPDATE sports SET (name) = (%s) WHERE id = %s"
+    values = [sport.name, sport.id]
+    run_sql(sql, values)
+
     

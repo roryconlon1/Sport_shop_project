@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-{{product.name}}
+<a href="/products/{{product.id}}/edit">Edit</a>
 {{product.description}}
+{{product.sport.name}}
+
 
 {% endblock %}

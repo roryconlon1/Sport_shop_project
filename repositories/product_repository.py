@@ -38,3 +38,8 @@ def select(id):
         sport = sport_repository.select(result['sport_id'])
         product = Product(result['name'], result['description'], result['stock_quantity'], result['buying_cost'], result['selling_price'], sport, result['id'])
     return product
+
+def update(product):
+    sql = "UPDATE products SET (name, description, stock_quantity, buying_cost, selling_price, sport_id) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [product.name, product.description, product.stock_quantity, product.buying_cost, product.selling_price, product.sport.id, product.id]
+    run_sql(sql, values)

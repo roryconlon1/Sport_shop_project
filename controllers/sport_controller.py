@@ -28,3 +28,15 @@ def create():
     sport = Sport(name)
     sport_repository.save(sport)
     return redirect('/sports')
+
+@sports_blueprint.route('/sports/<id>/edit')
+def edit(id):
+    sport = sport_repository.select(id)
+    return render_template('/sports/edit.html', all_sports=sport)
+
+@sports_blueprint.route('/sports/<id>', methods=['POST'])
+def update(id):
+    name = request.form['name']
+    sport= Sport(name, id)
+    sport_repository.update(sport)
+    return redirect('/sports/' + id)

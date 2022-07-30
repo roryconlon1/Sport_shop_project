@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/sports/{{all_sports.id}}" method="POST">
+    <div>
+        <label for="name">Sport</label>
+        <input type="text" name="name" id="name" required autofocus>
+    </div>
+        
+
+        
+    <button type="submit">Update Sport</button>
+</form>
+{% endblock %}

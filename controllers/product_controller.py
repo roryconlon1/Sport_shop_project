@@ -36,3 +36,21 @@ def create():
     product_repository.save(product)
     return redirect('/products')
 
+@products_blueprint.route('/products/<id>/edit')
+def edit(id):
+    product = product_repository.select(id)
+    sports = sport_repository.select_all()
+    return render_template('/products/edit.html', product=product, all_sports=sports)
+
+@products_blueprint.route('/products/<id>', methods=['POST'])
+def update(id):
+    name = request.form['name']
+    description = request.form['description']
+    stock_quantity = request.form['stock_quantity']
+    buying_cost = request.form['buying_cost']
+    selling_price = request.form['selling_price']
+    sport_id = request.form['sport_id']
+    sport = sport_repository.select(sport_id)
+    product = Product(name, description,stock_quantity, buying_cost, selling_price, sport, id)
+    product_repository.update(product)
+    return redirect('/products/' + id)
