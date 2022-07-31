@@ -4,6 +4,10 @@
 <a href="/products/{{product.id}}/edit">Edit</a>
 {{product.description}}
 {{product.sport.name}}
+<p>
+    {% set markup = product.selling_price - product.buying_cost %}
+    {{markup}}
+</p>
 
 
 {% endblock %}

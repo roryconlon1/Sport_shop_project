@@ -7,3 +7,7 @@ class Product:
         self.selling_price = selling_price
         self.sport = sport
         self.id = id
+
+    def markup(self):
+        new_price = self.selling_price - self.buying_cost
+        return new_price

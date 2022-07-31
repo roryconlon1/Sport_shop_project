@@ -4,11 +4,12 @@
 <form action="/sports/{{all_sports.id}}" method="POST">
     <div>
         <label for="name">Sport</label>
-        <input type="text" name="name" id="name" required autofocus>
+        <input type="text" name="name" id="name" value = "{{ all_sports.name }}" required autofocus>
     </div>
+<!-- cmd z few times get code back -->
         
 
         
-    <button type="submit">Update Sport</button>
+    <button type="submit" >Update Sport</button>
 </form>
 {% endblock %}

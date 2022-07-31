@@ -39,8 +39,12 @@ def select(id):
     return sport
 
 def update(sport):
-    sql = "UPDATE sports SET (name) = (%s) WHERE id = %s"
+    sql = "UPDATE sports SET name = %s WHERE id = %s"
     values = [sport.name, sport.id]
     run_sql(sql, values)
 
+def delete(id):
+    sql = "DELETE FROM sports WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
     
