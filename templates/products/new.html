@@ -24,6 +24,10 @@
         <input type="number" id="selling_price" name="selling_price" required>
     </div>
     <div>
+        <label for="product_type">Type:</label>
+        <input type="text" id="product_type" name="product_type" value="{{product.product_type}}" required>
+    </div>
+    <div>
         <label for="sport">Sport:</label>
         <select name="sport_id" id="sport_id" required>
             {% for sport in sports %}

@@ -16,11 +16,11 @@ sport_repository.save(sport_2)
 sport_3 = Sport("Ice Hockey", "Also fun to play, quite dangerous")
 sport_repository.save(sport_3)
 
-product_1 = Product("Football", "size 5 mitre", 7, 3, 10, sport_1)
+product_1 = Product("Football", "size 5 mitre", 7, 3, 10, "Ball", sport_1)
 product_repository.save(product_1)
 
-product_2 = Product("Racket", "Wilson - Red", 5, 35, 50, sport_2)
+product_2 = Product("Racket", "Wilson - Red", 5, 35, 50, "Equipment", sport_2)
 product_repository.save(product_2)
 
-product_3 = Product("Puck", "Bauer - Black", 3, 1, 4, sport_3)
+product_3 = Product("Puck", "Bauer - Black", 3, 1, 4, "Equipment", sport_3)
 product_repository.save(product_3)

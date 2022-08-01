@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p>
+    {% for type in types %}
+        {% if type.product_type == type.product_type   %} {{type.name}} {% endif %}
+    {% endfor %}
+</p>
+
+{% endblock %}

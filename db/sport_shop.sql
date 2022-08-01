@@ -13,5 +13,6 @@ CREATE TABLE products (
     stock_quantity INT,
     buying_cost INT,
     selling_price INT,
+    product_type VARCHAR(255),
     sport_id INT REFERENCES sports(id)
 );

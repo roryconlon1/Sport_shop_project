@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<p>
+    {% for product in products %}
+        {% if product.sport.id == sport.id %} {{product.name}} {% endif %}
+    {% endfor %}
+</p>
+
+{% endblock %}

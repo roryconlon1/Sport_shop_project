@@ -40,3 +40,9 @@ def updated(id):
     sport= Sport(name, id)
     sport_repository.update(sport)
     return redirect('/sports/' + id)
+
+@sports_blueprint.route('/sports/<id>/bysport')
+def all(id):
+    sport = sport_repository.select(id)
+    products = product_repository.select_all()
+    return render_template('/sports/bysport.html', sport=sport, products=products)

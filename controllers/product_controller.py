@@ -31,8 +31,9 @@ def create():
     buying_cost = request.form['buying_cost']
     selling_price = request.form['selling_price']
     sport_id = request.form['sport_id']
+    product_type = request.form['product_type']
     sport = sport_repository.select(sport_id)
-    product = Product(name, description, stock_quantity, buying_cost, selling_price, sport)
+    product = Product(name, description, stock_quantity, buying_cost, selling_price, product_type, sport)
     product_repository.save(product)
     return redirect('/products')
 
@@ -49,8 +50,14 @@ def update(id):
     stock_quantity = request.form['stock_quantity']
     buying_cost = request.form['buying_cost']
     selling_price = request.form['selling_price']
+    product_type = request.form['product_type']
     sport_id = request.form['sport_id']
     sport = sport_repository.select(sport_id)
-    product = Product(name, description,stock_quantity, buying_cost, selling_price, sport, id)
+    product = Product(name, description,stock_quantity, buying_cost, selling_price, product_type, sport, id)
     product_repository.update(product)
     return redirect('/products/' + id)
+
+@products_blueprint.route('/products/bytype')
+def type():
+    types = product_repository.select_all()
+    return render_template('/products/bytype.html', types=types)

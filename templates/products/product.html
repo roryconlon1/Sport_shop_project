@@ -4,9 +4,11 @@
 <a href="/products/{{product.id}}/edit">Edit</a>
 {{product.description}}
 {{product.sport.name}}
+<a href="/products/bytype">{{product.product_type}}</a>
 <p>
     {% set markup = product.selling_price - product.buying_cost %}
     {{markup}}
+    {{product.markup()}}
 </p>
 
 
