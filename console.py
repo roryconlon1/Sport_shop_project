@@ -13,7 +13,7 @@ sport_repository.save(sport_1)
 sport_2 = Sport("Tennis")
 sport_repository.save(sport_2)
 
-sport_3 = Sport("Ice Hockey", "Also fun to play, quite dangerous")
+sport_3 = Sport("Ice Hockey")
 sport_repository.save(sport_3)
 
 product_1 = Product("Football", "size 5 mitre", 7, 3, 10, "Ball", sport_1)

@@ -20,8 +20,9 @@ def show(id):
 
 @products_blueprint.route('/products/new')
 def new():
+    products = product_repository.select_all()
     sports = sport_repository.select_all()
-    return render_template('/products/new.html', sports=sports)
+    return render_template('/products/new.html', sports=sports, products=products)
 
 @products_blueprint.route('/products', methods = ['POST'])
 def create():
@@ -57,7 +58,17 @@ def update(id):
     product_repository.update(product)
     return redirect('/products/' + id)
 
-@products_blueprint.route('/products/bytype')
-def type():
+@products_blueprint.route('/products/Equipment')
+def equipment():
     types = product_repository.select_all()
-    return render_template('/products/bytype.html', types=types)
+    return render_template('/products/Equipment.html', types=types)
+
+@products_blueprint.route('/products/Ball')
+def ball():
+    types = product_repository.select_all()
+    return render_template('/products/Ball.html', types=types)
+
+@products_blueprint.route('/products/Clothes')
+def clothes():
+    types = product_repository.select_all()
+    return render_template('/products/Clothes.html', types=types)
