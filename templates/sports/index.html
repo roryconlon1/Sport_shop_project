@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
+
+<div class="all_sports">
 {% for sport in sports %}
-<a href="/sports/{{sport.id}}">{{sport.name}} </a>
-<a href="sports/{{sport.id}}/bysport">Show Products</a>
+<p><hr><a href="/sports/{{sport.id}}">{{sport.name}} </a></p>
+<p><i><a href="sports/{{sport.id}}/bysport">Show Products</a></i></p>
+
 {% endfor %}
+
+</div>
 {% endblock %}
+
+
+
+
+

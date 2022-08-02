@@ -25,7 +25,8 @@ def new():
 @sports_blueprint.route('/sports', methods = ['POST'])
 def create():
     name = request.form['name']
-    sport = Sport(name)
+    active = request.form['active']
+    sport = Sport(name, active)
     sport_repository.save(sport)
     return redirect('/sports')
 
@@ -37,7 +38,8 @@ def edit(id):
 @sports_blueprint.route('/sports/<id>', methods = ['POST'])
 def updated(id):
     name = request.form['name']
-    sport= Sport(name, id)
+    active = ['active']
+    sport= Sport(name, active, id)
     sport_repository.update(sport)
     return redirect('/sports/' + id)
 

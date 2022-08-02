@@ -1,15 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
 
-<a href="/products/{{product.id}}/edit">Edit</a>
-{{product.description}}
-{{product.sport.name}}
-<a href="/products/{{product.product_type}}">{{product.product_type}}</a>
-<p>
-    {% set markup = product.selling_price - product.buying_cost %}
-    {{markup}}
-    {{product.markup()}}
-</p>
+<div class="show_product">
+    <p>
+        <h3>{{product.name}}</h3>
+    </p>
+    <p>
+        {{product.description}}
+    </p>
+    <p>
+        Stock Level: {{product.stock_quantity}}
+    </p>
+    <p>
+        Buying Cost: £{{product.buying_cost}}
+    </p>
+    <p>
+        Selling Price: £{{product.selling_price}}
+    </p>
+    <p>
+        Markup on Item: £{{product.markup()}}
+    </p>
+    <p>
+        Category: <a href="/products/{{product.product_type}}">{{product.product_type}}</a>
+    </p> 
+    <p>
+        Sport: {{product.sport.name}}
+    </p>  
+    <p>
+        Edit Product: <a href="/products/{{product.id}}/edit">Edit</a>
+    </p> 
+
+</div>
 
 
 {% endblock %}
+
+

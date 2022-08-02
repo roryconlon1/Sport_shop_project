@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-{{sport.name}} 
-<a href="/sports/{{sport.id}}/edit">Edit</a>
+<section class="sport">
+    <b>{{sport.name}}</b> 
+    <p>
+        <p>
+            {% if sport.active == True %} <i>Active</i> 
+            {% else %}
+        </p>
+        <p>
+           <i>Deactive</i>
+        </p>
+    </p>    
+            {% endif %}
+    <p>
+        <a href="/sports/{{sport.id}}/edit">Edit</a>
+    </p>
+</section>
+
 {% endblock %}

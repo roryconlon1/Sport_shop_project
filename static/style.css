@@ -1,0 +1,268 @@
+body {
+    font-family: "Inconsolata", monospace;
+    margin: 0%;
+    padding: 0%;
+    background-color: cornsilk;
+    
+}
+
+body > header {
+    background-color: green;
+    background-image: url('/static/images/football_tic.jpy.jpeg');
+    background-size: cover;
+    padding: 0px;
+    padding-top: 300px;
+}
+
+body > header > h1 {
+    padding: 15px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+body >  footer > h2 {
+   background-color: black;
+   color: white;
+   margin-bottom: 0%;
+   text-align: center;
+}
+
+body > footer {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    
+    
+}
+
+body > header > nav > ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0%;
+
+    
+}
+
+body > header > nav > ul > li {
+    float: left;
+    border-right: 1px solid;
+}
+
+body > header > nav > ul > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+body > header > nav > ul > li > a:hover {
+    background-color: green;
+}
+
+.home {
+    text-align: center;
+}
+
+.products {
+    list-style-type: none;
+    margin: 5%;
+}
+
+
+
+.key{
+    list-style-type: none;
+    text-align: left;
+    padding: 3%;
+    margin-left: 75%;
+    
+    
+}
+
+.show_product {
+    padding: 3%;
+}
+ .edit_product {
+    padding: 3%;
+ }
+
+.ball {
+    padding: 3%;
+}
+
+.equipment {
+    padding: 3%;
+    
+}
+
+.all_sports {
+    padding: 3%;
+}
+
+.all_sports > p > i > a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.all_sports > p > i > a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.sport {
+    padding: 3%;
+}
+
+.new_product {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.new_product input {
+    width: 100%;
+}
+
+.new_product input[type=text] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.new_product input[type=number] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.new_product select {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.button1 {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: green;
+    border: 5px solid black;
+}
+
+.new_sport input {
+    width: 100%;
+}
+
+.new_sport {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.new_sport input[type=text] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.button2 {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: green;
+    border: 5px solid black;
+}
+
+.edit_product {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.edit_product input {
+    width: 100%;
+}
+
+.edit_product input[type=text] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.edit_product input[type=number] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.button3 {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: green;
+    border: 5px solid black;
+}
+
+.edit_product select {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.edit_sport {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.edit_sport input {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.edit_sport select {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.button4 {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: green;
+    border: 5px solid black;
+}
+
+.equipment {
+    padding: 3%;
+}

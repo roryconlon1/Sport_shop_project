@@ -1,10 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="all_products">
 {% for product in products %}
-<a href="/products/{{product.id}}">{{product.name}}</a>
-{% if product.stock_quantity <= 3 %}
-<span>&#9785</span>
-{% endif %}
+    <div class="products">
+        <li><hr><a href="/products/{{product.id}}">{{product.name}}</a></li>
+        <p>
+            {% if product.stock_quantity == 0 %}
+            <span>&#128308</span>
+            {% elif product.stock_quantity <=4 %}
+            <span>&#128993</span>
+            {% elif product.stock_quantity >= 10 %}
+            <span>&#128994</span>
+           
+            {% endif %}
+        </p>
+    </div>
+    
 {% endfor %}
+    <div class="key">
+        <li>
+            <ul>&#128994 In Stock</ul>
+            <ul>&#128993 Low Stock</ul>
+            <ul>&#128308 Out Of Stock</ul>
+        </li>
+    </div>
+   
+</div>
 {% endblock %}

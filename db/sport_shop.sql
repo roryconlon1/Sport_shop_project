@@ -3,7 +3,8 @@ DROP TABLE IF EXISTS sports;
 
 CREATE TABLE sports (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    active BOOLEAN
 );
 
 CREATE TABLE products (

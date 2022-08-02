@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p>
-    {% for type in types %}
-        {% if type.product_type == "Equipment" %}{{type.name}}{% endif %}
+<div class="equipment">
+    <p>
+        {% for type in types %}
+       
+            {% if type.product_type == "Equipment" %}
+            <p><hr>{{type.name}}</p>
+            <i>{{type.description}}</i>
+            {% endif %}
             
 
-    {% endfor %}
-</p>
-
+        {% endfor %}
+    </p>
+</div>
 {% endblock %}

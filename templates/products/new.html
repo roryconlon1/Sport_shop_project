@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/products" method="POST">
+<form class="new_product" action="/products" method="POST">
     <div>
         <label for="Name">Name:</label>
         <input type="text" id="name" name="name" required autofocus>
@@ -27,7 +27,7 @@
         <label for="product_type">Type:</label>
         <select name="product_type" id="product_type" required>
             {% for product in products %}
-                <option value="{{product.product_type}}">{{product.product_type}}</option>
+                <option value="{{product.product}}">{{product.product_type}}</option>
             {% endfor %}
         </select>
     </div>
@@ -35,11 +35,16 @@
         <label for="sport">Sport:</label>
         <select name="sport_id" id="sport_id" required>
             {% for sport in sports %}
-                <option value="{{sport.id}}">{{sport.name}}</option>
+                {% if sport.active == True %}
+                <option 
+                  value="{{sport.id}}" 
+                    >{{sport.name}}
+                </option>
+                {% endif %}
             {% endfor %}
         </select>
     </div>
-    <button type="submit">Add Product!</button>
+    <button class="button1" type="submit">Add Product!</button>
 
     
 

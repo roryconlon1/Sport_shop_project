@@ -1,15 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/sports/{{all_sports.id}}" method="POST">
+<form  class="edit_sport" action="/sports/{{all_sports.id}}" method="POST">
     <div>
         <label for="name">Sport</label>
         <input type="text" name="name" id="name" value = "{{ all_sports.name }}" required autofocus>
     </div>
-<!-- cmd z few times get code back -->
+    <div>
+        <label for="active">Active:</label>
+        <select name="active" id="active">
+            
+            <option value="active">Active</option>
+            </option>
+
+            <option value="deactivate">
+                 Deactivate
+            </option>
+        </select>
+    </div>
         
 
         
-    <button type="submit" >Update Sport</button>
+    <button class="button4" type="submit" >Update Sport</button>
 </form>
 {% endblock %}

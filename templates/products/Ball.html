@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p>
+<p class="ball">
     {% for type in types %}
         {% if type.product_type == "Ball" %}{{type.name}}{% endif %}
             
