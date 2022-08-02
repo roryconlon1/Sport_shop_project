@@ -36,9 +36,9 @@ def edit(id):
     return render_template('/sports/edit.html', all_sports=sport)
 
 @sports_blueprint.route('/sports/<id>', methods = ['POST'])
-def updated(id):
+def update(id):
     name = request.form['name']
-    active = ['active']
+    active = request.form['active']
     sport= Sport(name, active, id)
     sport_repository.update(sport)
     return redirect('/sports/' + id)
