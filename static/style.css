@@ -70,6 +70,10 @@ body > header > nav > ul > li > a:hover {
     background-color: green;
 }
 
+body > header > nav > ul > li > a:link {
+    text-decoration: none;
+}
+
 .home {
     text-align: center;
 }
@@ -183,6 +187,13 @@ body > header > nav > ul > li > a:hover {
     box-sizing: border-box;
 }
 
+.new_sport select {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
 .button2 {
     width: 100%;
     padding: 16px 20px;
@@ -265,4 +276,19 @@ body > header > nav > ul > li > a:hover {
 
 .equipment {
     padding: 3%;
+}
+
+.its_nice {
+    padding: 3%;
+}
+
+.welcome {
+    padding: 3%;
+}
+
+.borat {
+    
+    border-radius: 4%;
+    padding: 10px;
+    width: 650px;
 }
