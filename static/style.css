@@ -11,7 +11,7 @@ body > header {
     background-image: url('/static/images/football_tic.jpy.jpeg');
     background-size: cover;
     padding: 0px;
-    padding-top: 300px;
+    padding-top: 250px;
 }
 
 body > header > h1 {
@@ -21,6 +21,8 @@ body > header > h1 {
     text-align: center;
     margin-left: 25%;
     margin-right: 25%;
+    
+    
 }
 
 body >  footer > h2 {
