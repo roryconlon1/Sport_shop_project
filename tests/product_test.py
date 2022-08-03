@@ -4,7 +4,7 @@ from models.product import Product
 class TestProduct(unittest.TestCase):
 
     def setUp(self):
-        self.product = Product("football", "size 5", 3, 8, 10, "football",)
+        self.product = Product("football", "size 5", 3, 8, 10, "Ball" ,"football")
 
     def test_has_name(self):
         self.assertEqual("football", self.product.name)
@@ -23,3 +23,6 @@ class TestProduct(unittest.TestCase):
 
     def test_has_sport(self):
         self.assertEqual("football", self.product.sport)
+
+    def test_has_type(self):
+        self.assertEqual("Ball", self.product.product_type)

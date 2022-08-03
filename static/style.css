@@ -103,8 +103,13 @@ body > header > nav > ul > li > a:link {
     padding: 3%;
  }
 
-.ball {
-    padding: 3%;
+
+
+.balls {
+    padding: 1%;
+    padding-left: 3%;
+    padding-top: 2%;
+
 }
 
 .equipment {
@@ -289,8 +294,13 @@ body > header > nav > ul > li > a:link {
 }
 
 .borat {
-    
     border-radius: 4%;
     padding: 10px;
     width: 650px;
+}
+
+.bysport {
+    padding: 1%;
+    padding-left: 3%;
+    padding-top: 3%;
 }

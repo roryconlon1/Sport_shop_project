@@ -42,7 +42,8 @@ def create():
 def edit(id):
     product = product_repository.select(id)
     sports = sport_repository.select_all()
-    return render_template('/products/edit.html', product=product, all_sports=sports)
+    products = product_repository.select_all()
+    return render_template('/products/edit.html', product=product, all_sports=sports, products=products)
 
 @products_blueprint.route('/products/<id>', methods=['POST'])
 def update(id):

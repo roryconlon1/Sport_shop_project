@@ -24,3 +24,15 @@ product_repository.save(product_2)
 
 product_3 = Product("Ice Skates", "Bauer Vapor Hyperlite - Black", 3, 500, 700, "Equipment", sport_3)
 product_repository.save(product_3)
+
+product_4 = Product("Pack of 3 Tennis Balls", "Babolat - Pro Tour", 100, 4, 10, "Ball", sport_2)
+product_repository.save(product_4)
+
+product_5 = Product("Football Boots", "Nike - Mercurial Vapors", 3, 52, 125, "Equipment", sport_1)
+product_repository.save(product_5)
+
+product_6 = Product("Helmet", "CCM Tacks 70", 10, 47, 90, "Equipment", sport_3)
+product_repository.save(product_6)
+
+product_7 = Product("Shin Pads", "G-Form Pro-s Elite", 0, 20, 45, "Equipment", sport_1)
+product_repository.save(product_7)

@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<p>
+<p >
     {% for product in products %}
-        {% if product.sport.id == sport.id %} {{product.name}} {% endif %}
+    {% if product.sport.id == sport.id %} <hr> <p class="bysport"> {{product.name}}</p> {% endif %}
     {% endfor %}
 </p>
 

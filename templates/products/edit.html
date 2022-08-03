@@ -22,9 +22,14 @@
         <label for="selling_price">Selling Price:</label>
         <input type="number" id="selling_price" name="selling_price" value="{{product.selling_price}}" required>
     </div>
+    
     <div>
         <label for="product_type">Type:</label>
-        <input type="text" id="product_type" name="product_type" value="{{product.product_type}}" required></input>
+        <select name="product_type" id="product_type" required>
+            {% for product in products %}
+                <option value="{{product.product}}">{{product.product_type}}</option>
+            {% endfor %}
+        </select>
     </div>
     
     
