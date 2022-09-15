@@ -1,11 +1,17 @@
 To run:
 
 git clone https://github.com/roryconlon1/Sport_shop_project
+
 python3 run_tests.py
+
 dropdb sport_shop
+
 createdb sport_shop
+
 psql -d sport_shop -f db/sport_shop.sql
+
 python3 console.py
+
 flask run
 
 
